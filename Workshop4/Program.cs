@@ -49,9 +49,26 @@ namespace WorkShop4
 
             // Call Multiply method with only one parameter (num2 uses default 1)
             int product2 = calc.Multiply(7);
-            Console.WriteLine("Product (7*1): " + product2);
+            Console.WriteLine("Product (7*3): " + product2);
 
-            
+            // Create an object of ParameterDemo
+            ParameterDemo demo = new ParameterDemo();
+
+            // Using ref parameter
+            int myNumber = 5;
+            Console.WriteLine("Before Increase: " + myNumber);
+            demo.Increase(ref myNumber);
+            Console.WriteLine("After Increase: " + myNumber);
+            Console.WriteLine();
+
+            // Using out parameter
+            demo.GetFullName(out string fullName);
+            Console.WriteLine("Full Name: " + fullName);
+            Console.WriteLine();
+
+            // Using params parameter
+            int total = demo.SumAll(1, 2, 3, 4, 5);
+            Console.WriteLine("Sum of numbers: " + total);
         }
     }
 }
