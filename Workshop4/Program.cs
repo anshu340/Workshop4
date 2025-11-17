@@ -6,6 +6,8 @@ namespace WorkShop4
     {
         static void Main(string[] args)
         {
+             // Task 1
+
             // Create first Student object
             Student student1 = new Student();
             student1.Name = "Anshu";
@@ -33,6 +35,8 @@ namespace WorkShop4
             Console.WriteLine("Address: " + student2.Address);
             Console.WriteLine("College: " + Student.collegeName);
 
+            // Task 2
+
             // Create Calculator object
             Calculator calc = new Calculator();
 
@@ -50,6 +54,8 @@ namespace WorkShop4
             // Call Multiply method with only one parameter (num2 uses default 1)
             int product2 = calc.Multiply(7);
             Console.WriteLine("Product (7*3): " + product2);
+
+            // Task 3
 
             // Create an object of ParameterDemo
             ParameterDemo demo = new ParameterDemo();
@@ -69,6 +75,29 @@ namespace WorkShop4
             // Using params parameter
             int total = demo.SumAll(1, 2, 3, 4, 5);
             Console.WriteLine("Sum of numbers: " + total);
+
+            // Task 4
+
+            // Create one object using default constructor
+            Player player1 = new Player();
+            Console.WriteLine();
+
+            // Create another object using parameterized constructor
+            Player player2 = new Player("Anshu", 10, 100);
+
+            // Print the values of the fields using both objects
+            Console.WriteLine("Player 1 (Default Constructor):");
+            Console.WriteLine("Player Name: " + player1.playerName);
+            Console.WriteLine("Level: " + player1.level);
+            Console.WriteLine("Health: " + player1.health);
+            Console.WriteLine();
+
+            Console.WriteLine("Player 2 (Parameterized Constructor):");
+            Console.WriteLine("Player Name: " + player2.playerName);
+            Console.WriteLine("Level: " + player2.level);
+            Console.WriteLine("Health: " + player2.health);
+            Console.WriteLine();
+
         }
     }
 }
