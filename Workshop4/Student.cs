@@ -10,9 +10,9 @@ namespace Workshop4
     public class Student
     {
         // 3 instance fields
-        public string name;
-        public int age;
-        public string address;
+        public string Name;
+        public int Age;
+        public string Address;
 
         // 1 static field
         public static string collegeName = "Itahari international College";

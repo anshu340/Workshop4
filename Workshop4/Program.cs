@@ -1,37 +1,57 @@
-﻿using System;
-using Workshop4;
+﻿using Workshop4;
 
-public class Program
+namespace WorkShop4
 {
-    public static void Main(string[] args)
+    internal class Program
     {
-        //Task 1
+        static void Main(string[] args)
+        {
+            // Create first Student object
+            Student student1 = new Student();
+            student1.Name = "Anshu";
+            student1.Age = 21;
+            student1.Address = "Belbari";
 
-        // Creating first object
-        Student s1 = new Student();
-        s1.name = "Anshu";
-        s1.age = 21;
-        s1.address = "Belbari";
+            // Create second Student object
+            Student student2 = new Student();
+            student2.Name = "kamana";
+            student2.Age = 24;
+            student2.Address = "Belbari";
 
-        // Creating second object
-        Student s2 = new Student();
-        s2.name = "Ab";
-        s2.age = 18;
-        s2.address = "Belbari - 2";
+            // Display values of first student
+            Console.WriteLine("Student 1:");
+            Console.WriteLine("Name: " + student1.Name);
+            Console.WriteLine("Age: " + student1.Age);
+            Console.WriteLine("Address: " + student1.Address);
+            Console.WriteLine("College: " + Student.collegeName);
+            Console.WriteLine();
 
-        // Display object 1 values
-        Console.WriteLine("Student 1 Details:");
-        Console.WriteLine("Name: " + s1.name);
-        Console.WriteLine("Age: " + s1.age);
-        Console.WriteLine("Address: " + s1.address);
+            // Display values of second student
+            Console.WriteLine("Student 2:");
+            Console.WriteLine("Name: " + student2.Name);
+            Console.WriteLine("Age: " + student2.Age);
+            Console.WriteLine("Address: " + student2.Address);
+            Console.WriteLine("College: " + Student.collegeName);
 
-        // Display object 2 values
-        Console.WriteLine("\nStudent 2 Details:");
-        Console.WriteLine("Name: " + s2.name);
-        Console.WriteLine("Age: " + s2.age);
-        Console.WriteLine("Address: " + s2.address);
+            // Create Calculator object
+            Calculator calc = new Calculator();
 
-        // Print static field
-        Console.WriteLine("\nCollege Name : " + Student.collegeName);
+            // Call the PrintWelcome method
+            calc.PrintWelcome();
+
+            // Call Add method and print result
+            int sum = calc.Add(10, 20);
+            Console.WriteLine("Sum: " + sum);
+
+            // Call Multiply method with both parameters
+            int product1 = calc.Multiply(5, 3);
+            Console.WriteLine("Product (5*3): " + product1);
+
+            // Call Multiply method with only one parameter (num2 uses default 1)
+            int product2 = calc.Multiply(7);
+            Console.WriteLine("Product (7*1): " + product2);
+
+            
+        }
     }
 }
