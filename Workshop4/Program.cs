@@ -162,7 +162,22 @@ namespace WorkShop4
 
             // Calculate percentage (BUGGY VERSION - for debugging practice)
             double percentage = (double)marks / total * 100;
+            
             Console.WriteLine($"Percentage: {percentage}");
+
+            // Task 7
+
+            Car myCar = new Car
+            {
+                Brand = "Toyota",
+                Model = "Camry",
+                Year = 2023,
+                NumberOfDoors = 4
+            };
+
+            myCar.DisplayInfo();
+            myCar.Start();
+            myCar.OpenTrunk();
         }
     }
 }
