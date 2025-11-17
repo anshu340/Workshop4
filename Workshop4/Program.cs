@@ -98,6 +98,71 @@ namespace WorkShop4
             Console.WriteLine("Health: " + player2.health);
             Console.WriteLine();
 
+            // Task 5
+
+            Console.Write("Enter the day (Example: Sunday): ");
+            string day = Console.ReadLine();
+
+
+            // Check if the day is weekend or weekday
+            if (day.ToLower() == "friday" || day.ToLower() == "saturday")
+            {
+                Console.WriteLine("It is: Weekend");
+            }
+            else
+            {
+                Console.WriteLine("It is: Weekday");
+            }
+            Console.WriteLine();
+
+
+            // Record Book
+
+            // Create an object for book and assign the values
+            Book book1 = new Book("WAR AND PEACE", "Leo Tolstoy", 680);
+
+            // Print the value of first object
+            Console.WriteLine("Book 1:");
+            Console.WriteLine("Title: " + book1.title);
+            Console.WriteLine("Author: " + book1.author);
+            Console.WriteLine("Price: $" + book1.price);
+            Console.WriteLine();
+
+            // Create another object and by using with expression, change the title and price
+            Book book2 = book1 with { title = "Harry Potter", price = 2199 };
+
+            Console.WriteLine("Book 2 ");
+            Console.WriteLine("Title: " + book2.title);
+            Console.WriteLine("Author: " + book2.author);
+            Console.WriteLine("Price: $" + book2.price);
+            Console.WriteLine();
+
+            // Deconstruct the second object into three variables and print them
+            var (title, author, price) = book2;
+            Console.WriteLine("Deconstructed Book 2:");
+            Console.WriteLine("Title: " + title);
+            Console.WriteLine("Author: " + author);
+            Console.WriteLine("Price: $" + price);
+
+            // Task 5
+
+            // Ask user for input
+            Console.Write("Enter marks: ");
+            string marksInput = Console.ReadLine();
+
+            Console.Write("Enter total: ");
+            string totalInput = Console.ReadLine();
+
+            // Parse inputs using TryParse
+            int marks, totals;
+            if (!int.TryParse(marksInput, out marks))
+                marks = 0;
+            if (!int.TryParse(totalInput, out total))
+                total = 0;
+
+            // Calculate percentage (BUGGY VERSION - for debugging practice)
+            double percentage = (double)marks / total * 100;
+            Console.WriteLine($"Percentage: {percentage}");
         }
     }
 }
