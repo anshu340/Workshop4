@@ -144,7 +144,7 @@ namespace WorkShop4
             Console.WriteLine("Author: " + author);
             Console.WriteLine("Price: $" + price);
 
-            // Task 5
+            // Task 6
 
             // Ask user for input
             Console.Write("Enter marks: ");
